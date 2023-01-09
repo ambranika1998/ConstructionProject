@@ -94,6 +94,8 @@ class Migration(migrations.Migration):
                 ('id', models.BigAutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
                 ('job', models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, related_name='job_users', to='construction.job')),
                 ('user', models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, related_name='job_users', to=settings.AUTH_USER_MODEL)),
+                ('start_date', models.DateField()),
+                ('end_date', models.DateField()),
             ],
             options={
                 'verbose_name': 'Job User',
